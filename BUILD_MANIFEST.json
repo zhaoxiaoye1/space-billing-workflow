@@ -22,9 +22,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "file": "docs/assets/dashboard-mobile.png",
+      "bytes": 40697,
+      "sha256": "8bd564d68a5645be6dc47fe38f4f6b201f3c02ad97fd28cb08396fd33b5a1860"
+    },
+    {
+      "file": "docs/assets/dashboard-preview.png",
+      "bytes": 95620,
+      "sha256": "901d240c6410e4cae4a6fbfd17d6c2ca11eb4e2a27a8efa4dc7ecd012d5e7dae"
+    },
+    {
       "file": "docs/assets/demo.png",
-      "bytes": 100375,
-      "sha256": "d684c43378c944b0cd150bdc9d7789a76814549e5e615bab4a8bc622068528bb"
+      "bytes": 120696,
+      "sha256": "996bdc435cc07ef093adb9f72cdae6e2f3580ec63aa0b6b353cf3ae797eff6a5"
     },
     {
       "file": "docs/assets/mobile.png",
@@ -33,13 +43,38 @@
     },
     {
       "file": "docs/assets/preview.png",
-      "bytes": 167579,
-      "sha256": "33dda5a28eb910a8ae506a2ad92636d2bd1ee17dcdede66747600de164b19ea8"
+      "bytes": 146615,
+      "sha256": "b24ea99424a21f8ed87995b51914ba3554eb0ac9e666a7b8c75cd399d6ec2293"
+    },
+    {
+      "file": "docs/dashboard-2026-01.json",
+      "bytes": 4983,
+      "sha256": "1082e8595205cfdbffded39fdfcde21c66e5723fe58296f1df1d3d8293075696"
+    },
+    {
+      "file": "docs/dashboard-2026-02.json",
+      "bytes": 4996,
+      "sha256": "97b68397f4d7c750f44863a5b59ace85134d7883afb5036c369d00da6fbe4458"
+    },
+    {
+      "file": "docs/dashboard.html",
+      "bytes": 33509,
+      "sha256": "145625de1e0b4fc1072b442dbd6f7b6c409ef5904eb22c0db5ce70213cd7b3e7"
     },
     {
       "file": "docs/examples/billing_report.xlsx",
       "bytes": 11792,
       "sha256": "6204afbaaa204cb0ca68f68c4c1311f17b0e072c96843355de7c4cf2c748cf72"
+    },
+    {
+      "file": "docs/examples/cross_month_input.xlsx",
+      "bytes": 5722,
+      "sha256": "1d7e08cc424af0a56493e8931df7f1a1bfd78c6926a21a05b09ccdce66b8fa0a"
+    },
+    {
+      "file": "docs/examples/cross_month_report.xlsx",
+      "bytes": 12424,
+      "sha256": "dab93ef5747d5abd785a87f8e1421fd66e4f20f9832f2c1f312208e08f4dc90a"
     },
     {
       "file": "docs/examples/input.xlsx",
@@ -48,8 +83,8 @@
     },
     {
       "file": "docs/index.html",
-      "bytes": 9080,
-      "sha256": "c9aa256bdc5057d5dbb462d7b1811d861180ff95f92ca61bf5abbc312afdd024"
+      "bytes": 13394,
+      "sha256": "78e348131643da828280b10946809966206f9f8287b5ad250eb8449e77646433"
     },
     {
       "file": "docs/style.css",
@@ -67,6 +102,21 @@
       "sha256": "7208955cd472f0ba7ca4c3db1e5ba480af70651a3c45f8191d1062dfb652587b"
     },
     {
+      "file": "examples/browser-cross-month.csv",
+      "bytes": 244,
+      "sha256": "107cf61e6326e82146cea31fd339a82b0253236be75f5a8a9fa2bc7b1eb33792"
+    },
+    {
+      "file": "examples/cross_month_input.xlsx",
+      "bytes": 5722,
+      "sha256": "1d7e08cc424af0a56493e8931df7f1a1bfd78c6926a21a05b09ccdce66b8fa0a"
+    },
+    {
+      "file": "examples/cross_month_report.xlsx",
+      "bytes": 12424,
+      "sha256": "dab93ef5747d5abd785a87f8e1421fd66e4f20f9832f2c1f312208e08f4dc90a"
+    },
+    {
       "file": "examples/input.xlsx",
       "bytes": 5705,
       "sha256": "29c30944debe36d95e3a2438ac12060b2f581524b1f1a61468aa89b744eec9f6"
@@ -78,8 +128,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 1959,
-      "sha256": "79294dd96aa2c6fb26817313791347b02ce82336c80d43dafc291b1762172fee"
+      "bytes": 3091,
+      "sha256": "6e18ae85da2f446ec4d3d7c7cd230e1cf0585b782b9c0c4c5a352bdb76e865bb"
     },
     {
       "file": "requirements.txt",
@@ -87,9 +137,24 @@
       "sha256": "aeaa881c2aa6d48f13e910ed16fe06f2487dbd7035b892272c0a639b5fc061a1"
     },
     {
+      "file": "REVISION_CHECK.json",
+      "bytes": 602,
+      "sha256": "2b6f71cfd74668a4bf596e238c57209de64c4e3db793911b13021a85b8d0c6ae"
+    },
+    {
       "file": "src/billing_core.py",
       "bytes": 72913,
       "sha256": "b1a635d21905a556f73d00177aefa717ef182d962e21e63be026bd4a93866471"
+    },
+    {
+      "file": "src/build_dashboard_demo.py",
+      "bytes": 3360,
+      "sha256": "1e3a93e20b3f8a31b8cadd0728a4642ae58d04781626735c5b07d0531f05666c"
+    },
+    {
+      "file": "src/dashboard_metrics.py",
+      "bytes": 27110,
+      "sha256": "f00b5bcd99c7b5645b594f1fd3042244dcbbd03e6fd2de33bebd62e6e235872d"
     },
     {
       "file": "src/run_demo.py",
