@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-20",
+  "browser": {
+    "repo": "space-billing-workflow",
+    "desktop": "1440x1000",
+    "mobile": "390x844",
+    "horizontal_overflow": false,
+    "page_errors": []
+  },
+  "scope": "Playwright on local HTTP server, Chrome headless. Desktop 1440x1000 and mobile 390x844. No page-level horizontal overflow or uncaught page errors.",
+  "numerical_checks": {
+    "python_total_yuan": 1670,
+    "office_yuan": 550,
+    "lab_period_days": [
+      15,
+      15
+    ],
+    "lab_period_fees_yuan": [
+      700,
+      420
+    ],
+    "browser_lab_yuan": 1120,
+    "cross_month_days": 12,
+    "cross_month_fee_yuan": 120
+  }
+}

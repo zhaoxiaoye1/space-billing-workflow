@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-20",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 50,
+      "sha256": "3fbfe10fb014a532bed6c2dbb6aa3c46eecd977387c315aeb7a812e081641c1a"
+    },
+    {
+      "file": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "DATA_NOTES.md",
+      "bytes": 301,
+      "sha256": "a8c64a7dc00c7660d19874dec927ce53a584f894af30ca8156df14461c641159"
+    },
+    {
+      "file": "docs/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "docs/assets/demo.png",
+      "bytes": 100375,
+      "sha256": "d684c43378c944b0cd150bdc9d7789a76814549e5e615bab4a8bc622068528bb"
+    },
+    {
+      "file": "docs/assets/mobile.png",
+      "bytes": 65087,
+      "sha256": "ce56115f3d68dcd5fa894d8464850fc953d703d76623aaeb952283dfc6353af3"
+    },
+    {
+      "file": "docs/assets/preview.png",
+      "bytes": 167579,
+      "sha256": "33dda5a28eb910a8ae506a2ad92636d2bd1ee17dcdede66747600de164b19ea8"
+    },
+    {
+      "file": "docs/examples/billing_report.xlsx",
+      "bytes": 11792,
+      "sha256": "6204afbaaa204cb0ca68f68c4c1311f17b0e072c96843355de7c4cf2c748cf72"
+    },
+    {
+      "file": "docs/examples/input.xlsx",
+      "bytes": 5705,
+      "sha256": "29c30944debe36d95e3a2438ac12060b2f581524b1f1a61468aa89b744eec9f6"
+    },
+    {
+      "file": "docs/index.html",
+      "bytes": 9080,
+      "sha256": "c9aa256bdc5057d5dbb462d7b1811d861180ff95f92ca61bf5abbc312afdd024"
+    },
+    {
+      "file": "docs/style.css",
+      "bytes": 6392,
+      "sha256": "b102c5da4a0ff76c624160b04f42d5e266803d8e6a9ac400abe656eaad5638ab"
+    },
+    {
+      "file": "examples/billing_report.xlsx",
+      "bytes": 11792,
+      "sha256": "6204afbaaa204cb0ca68f68c4c1311f17b0e072c96843355de7c4cf2c748cf72"
+    },
+    {
+      "file": "examples/browser-billing.csv",
+      "bytes": 196,
+      "sha256": "7208955cd472f0ba7ca4c3db1e5ba480af70651a3c45f8191d1062dfb652587b"
+    },
+    {
+      "file": "examples/input.xlsx",
+      "bytes": 5705,
+      "sha256": "29c30944debe36d95e3a2438ac12060b2f581524b1f1a61468aa89b744eec9f6"
+    },
+    {
+      "file": "PUBLIC_CHANGES.md",
+      "bytes": 485,
+      "sha256": "dc8db04c7ca3f76afd7885b430de11e183bfab628923b0422a1b4f8c1da5c713"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1959,
+      "sha256": "79294dd96aa2c6fb26817313791347b02ce82336c80d43dafc291b1762172fee"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 25,
+      "sha256": "aeaa881c2aa6d48f13e910ed16fe06f2487dbd7035b892272c0a639b5fc061a1"
+    },
+    {
+      "file": "src/billing_core.py",
+      "bytes": 72913,
+      "sha256": "b1a635d21905a556f73d00177aefa717ef182d962e21e63be026bd4a93866471"
+    },
+    {
+      "file": "src/run_demo.py",
+      "bytes": 457,
+      "sha256": "62d6526df178266a91e8815fbc2a2edd5caec6ef17e9bd04f40fa42f80f7dfe5"
+    },
+    {
+      "file": "VERIFICATION.json",
+      "bytes": 662,
+      "sha256": "602ec81375bc422a049383fa08c19e71e319bb8390784457d55e8539a4e21dd5"
+    }
+  ]
+}
