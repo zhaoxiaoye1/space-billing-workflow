@@ -1,23 +1,20 @@
 {
   "date": "2026-11-20",
-  "research_context": "sample, experiment, question, tool and reading guide present",
-  "cross_month": {
-    "initial_area_m2": 100,
-    "area_days": 1800,
-    "january_yuan": 500,
-    "february_yuan": 250,
-    "total_yuan": 750,
-    "share_25_percent_total_yuan": 291.67,
-    "invalid_retirement_blocked": true
-  },
-  "dashboard": {
-    "january_total": "1,151.00",
-    "february_total": "838.00",
-    "kpi_cards": 6,
-    "charts": "at least four",
-    "month_switch": "passed"
-  },
-  "desktop": "1440x1000",
-  "mobile": "390x844",
+  "ppt_source": "Presentation_pire_story_reworked.pptx, slide 6",
+  "stage_images": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "ppt_crop_and_placement": "preserved",
+  "dashboard_json_autoload": true,
+  "file_chooser_removed": true,
+  "dashboard_live_embed": true,
+  "static_dashboard_image_removed": true,
+  "january_dashboard_yuan": 1151,
+  "february_dashboard_yuan": 838,
+  "desktop_and_mobile": "passed",
   "page_errors": []
 }

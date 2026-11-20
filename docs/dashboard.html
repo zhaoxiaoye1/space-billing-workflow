@@ -281,7 +281,7 @@
 .header>div,.chart-card,.kpi-card{min-width:0}.header>div{max-width:100%}.header>div:last-child{flex-wrap:wrap}.dynamic-time{font-size:13px!important;letter-spacing:0!important;overflow-wrap:anywhere}.chart-card{overflow:hidden}.table-scroll-container{overflow:auto;width:100%}table{min-width:600px}.kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:760px){.header{padding:16px}.public-banner label{display:inline-flex;align-items:center;gap:8px;margin:8px 0}.kpi-grid,.chart-grid{grid-template-columns:minmax(0,1fr)!important}}
 +</style>
 </head>
-<body><div class="public-banner"><strong>管理者视图 · 虚构数据演示</strong>　<label>查看月份 <select id="demo-month"><option value="2026-01">2026 年 1 月</option><option value="2026-02">2026 年 2 月</option></select></label>　<a href="index.html#management">返回项目说明</a><p>费用金额单位均为元。回答本月费用来自哪里、哪些课题组与资源贡献较多、不同月份如何变化。源数据由同一分段计费核心生成。资源占用表示当月有计费记录的编号数量，面积使用率和月底时点占用需另行定义。</p></div>
+<body><div class="public-banner"><strong>管理者视图 · 已自动载入样板数据</strong>　<label>查看月份 <select id="demo-month"><option value="2026-01">2026 年 1 月</option><option value="2026-02">2026 年 2 月</option></select></label>　<a href="index.html#management">返回项目说明</a><p>费用金额单位均为元。回答本月费用来自哪里、哪些课题组与资源贡献较多、不同月份如何变化。源数据由同一分段计费核心生成。资源占用表示当月有计费记录的编号数量，面积使用率和月底时点占用需另行定义。</p></div>
     <div class="container">
         <!-- Header -->
         <div class="header">
@@ -291,8 +291,6 @@
                 <div class="meta-info" id="meta-info" style="display: none;"></div>
             </div>
             <div style="display: flex; gap: 12px; align-items: center;">
-                <input type="file" id="json-file-input" accept=".json" style="display: none;" onchange="loadDataFromFile(event)">
-                <button class="refresh-btn" onclick="document.getElementById('json-file-input').click()">选择JSON文件</button>
                 <button class="refresh-btn" onclick="loadData()">刷新数据</button>
             </div>
         </div>
@@ -333,107 +331,25 @@
     
     <script>
         let dashboardData = null;
-        let currentJsonFile = null;
         let scrollTimer = null; // 保存滚动定时器引用
         let isHistoricalData = false; // 标记是否为历史数据
         
-        // 从文件选择器加载JSON数据
-        function loadDataFromFile(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-            
-            // 清理旧的滚动定时器
-            if (scrollTimer) {
-                clearInterval(scrollTimer);
-                scrollTimer = null;
-            }
-            
-            currentJsonFile = file;
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                try {
-                    dashboardData = JSON.parse(e.target.result);
-                    // 判断是否为历史数据
-                    checkIfHistoricalData();
-                    renderDashboard();
-                } catch (error) {
-                    document.getElementById('kpi-grid').innerHTML = 
-                        `<div class="error">错误: JSON文件格式不正确<br>${error.message}</div>`;
-                    console.error('解析JSON失败:', error);
-                }
-            };
-            
-            reader.onerror = function() {
-                document.getElementById('kpi-grid').innerHTML = 
-                    `<div class="error">错误: 读取文件失败</div>`;
-            };
-            
-            reader.readAsText(file);
-        }
-        
-        // 自动加载dashboard.json
+        // The published demo always starts from a prepared fictional JSON sample.
         async function loadData() {
-            // 清理旧的滚动定时器
-            if (scrollTimer) {
-                clearInterval(scrollTimer);
-                scrollTimer = null;
-            }
-            
-            if (!currentJsonFile) {
-                // 优先尝试自动加载dashboard.json
-                try {
-                    const response = await fetch('dashboard-'+document.getElementById('demo-month').value+'.json');
-                    if (response.ok) {
-                        dashboardData = await response.json();
-                        checkIfHistoricalData(); // Select the display period from the loaded metadata.
-                        renderDashboard();
-                        return;
-                    }
-                } catch (e) {
-                    // 如果fetch失败（可能是CORS问题），尝试使用FileReader读取同目录文件
-                    // 注意：浏览器安全限制，无法直接读取同目录文件
-                    // 显示提示让用户手动选择
-                }
-                
-                // 如果自动加载失败，显示友好提示
-                document.getElementById('kpi-grid').innerHTML = 
-                    `<div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 24px; text-align: center;">
-                        <h3 style="color: #0f172a; margin-bottom: 16px; font-size: 20px;">📊 欢迎使用智慧大屏</h3>
-                        <p style="color: #475569; margin-bottom: 20px; font-size: 16px;">
-                            请点击右上角 <strong style="color: #0ea5e9;">"选择JSON文件"</strong> 按钮<br>
-                            选择 <code style="background: #e0f2fe; padding: 4px 8px; border-radius: 4px;">dashboard.json</code> 文件
-                        </p>
-                        <div style="background: white; padding: 16px; border-radius: 8px; margin-top: 16px; text-align: left;">
-                            <p style="color: #64748b; font-size: 14px; margin: 8px 0;">
-                                💡 <strong>提示：</strong>
-                            </p>
-                            <ul style="color: #64748b; font-size: 14px; margin: 8px 0; padding-left: 24px;">
-                                <li>如果没有 <code>dashboard.json</code> 文件，请先运行 Python 脚本生成</li>
-                                <li>或者使用 <code>启动智慧大屏.bat</code> 启动服务器（需要安装Python）</li>
-                            </ul>
-                        </div>
-                    </div>`;
-                document.getElementById('meta-info').style.display = 'none';
-            } else {
-                // 重新读取当前文件
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        dashboardData = JSON.parse(e.target.result);
-                        // 判断是否为历史数据（通过检查目标月份是否为当前月份）
-                        checkIfHistoricalData();
-                        renderDashboard();
-                    } catch (error) {
-                        document.getElementById('kpi-grid').innerHTML = 
-                            `<div class="error">错误: JSON文件格式不正确<br>${error.message}</div>`;
-                    }
-                };
-                reader.readAsText(currentJsonFile);
+            if (scrollTimer) { clearInterval(scrollTimer); scrollTimer = null; }
+            try {
+                const month = document.getElementById('demo-month').value;
+                const response = await fetch('dashboard-' + month + '.json');
+                if (!response.ok) throw new Error('Sample data could not be loaded');
+                dashboardData = await response.json();
+                checkIfHistoricalData();
+                renderDashboard();
+            } catch (error) {
+                document.getElementById('kpi-grid').textContent = '样板数据加载失败，请刷新页面重试。';
+                console.error(error);
             }
         }
-        
-        // 判断是否为历史数据
+
         function checkIfHistoricalData() {
             if (!dashboardData || !dashboardData.meta) {
                 isHistoricalData = false;
@@ -856,5 +772,5 @@
             }
         });
     </script>
-<script>document.getElementById('demo-month').addEventListener('change',()=>{currentJsonFile=null;loadData()});</script></body>
+<script>document.getElementById('demo-month').addEventListener('change',()=>loadData());</script></body>
 </html>

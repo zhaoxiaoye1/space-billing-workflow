@@ -22,16 +22,6 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "file": "docs/assets/dashboard-mobile.png",
-      "bytes": 40697,
-      "sha256": "8bd564d68a5645be6dc47fe38f4f6b201f3c02ad97fd28cb08396fd33b5a1860"
-    },
-    {
-      "file": "docs/assets/dashboard-preview.png",
-      "bytes": 95620,
-      "sha256": "901d240c6410e4cae4a6fbfd17d6c2ca11eb4e2a27a8efa4dc7ecd012d5e7dae"
-    },
-    {
       "file": "docs/assets/demo.png",
       "bytes": 120696,
       "sha256": "996bdc435cc07ef093adb9f72cdae6e2f3580ec63aa0b6b353cf3ae797eff6a5"
@@ -58,8 +48,8 @@
     },
     {
       "file": "docs/dashboard.html",
-      "bytes": 33509,
-      "sha256": "145625de1e0b4fc1072b442dbd6f7b6c409ef5904eb22c0db5ce70213cd7b3e7"
+      "bytes": 29044,
+      "sha256": "7bcd819dd88163155bd87f5c91aa7351091ee753856aeda1c051a2a25173f844"
     },
     {
       "file": "docs/examples/billing_report.xlsx",
@@ -83,8 +73,8 @@
     },
     {
       "file": "docs/index.html",
-      "bytes": 13394,
-      "sha256": "78e348131643da828280b10946809966206f9f8287b5ad250eb8449e77646433"
+      "bytes": 13305,
+      "sha256": "9436d6e435e324454239d4f9a18b33343c78657dc492aa6ff7a1417a3efecb96"
     },
     {
       "file": "docs/style.css",
@@ -128,8 +118,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 3091,
-      "sha256": "6e18ae85da2f446ec4d3d7c7cd230e1cf0585b782b9c0c4c5a352bdb76e865bb"
+      "bytes": 3160,
+      "sha256": "7886066a1941c3d10ed336ade72fd6e4f06298de75fb977bfec92db8c3572552"
     },
     {
       "file": "requirements.txt",
@@ -138,8 +128,8 @@
     },
     {
       "file": "REVISION_CHECK.json",
-      "bytes": 602,
-      "sha256": "2b6f71cfd74668a4bf596e238c57209de64c4e3db793911b13021a85b8d0c6ae"
+      "bytes": 475,
+      "sha256": "13995b352e934ea5efeeed3ca4e209e8a639e48c4ec3e72a1b712d183b07abde"
     },
     {
       "file": "src/billing_core.py",

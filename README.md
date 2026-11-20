@@ -39,7 +39,7 @@ python src/build_dashboard_demo.py
 
 [打开完整大屏](https://zhaoxiaoye1.github.io/space-billing-workflow/dashboard.html)。复用实际交付项目的前端和指标提取函数，使用重新构造的输入与容量。支持月份切换、费用结构、课题组排名、中心对比、月度趋势和资源计数。资源占用率为当月计费资源编号数/演示容量，不能解释为面积使用率或月底时点占用率。
 
-![决策大屏](docs/assets/dashboard-preview.png)
+在线大屏自动读取仓库内的样板 JSON，无需选择本地文件。项目页直接嵌入可操作的大屏。
 
 ## 我的工作与 AI 协作
 
