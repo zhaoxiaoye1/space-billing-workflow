@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -280,7 +280,7 @@
     body{background:#f4f3ed;font-family:"DM Sans","Microsoft YaHei",sans-serif}.header,.kpi-card,.chart-card,.table-card{box-shadow:none;border:1px solid #d7dcd2;border-radius:7px;background:#fffefa}.header h1{font-size:25px}.public-banner{padding:16px 20px;background:#e7eee7;color:#183a2f;margin-bottom:16px;line-height:1.7}.public-banner select{font:inherit;padding:6px}.public-banner a{color:inherit}.kpi-card .value{color:#216e57}.public-banner p{font-size:13px;margin:7px 0 0}@media(max-width:760px){.header{flex-direction:column;align-items:flex-start;gap:12px}.kpi-grid,.chart-grid,.table-grid{grid-template-columns:1fr!important}.header h1{font-size:22px}.header-actions{flex-wrap:wrap}.container{min-width:0}.table-card{overflow:auto}}
 .header>div,.chart-card,.kpi-card{min-width:0}.header>div{max-width:100%}.header>div:last-child{flex-wrap:wrap}.dynamic-time{font-size:13px!important;letter-spacing:0!important;overflow-wrap:anywhere}.chart-card{overflow:hidden}.table-scroll-container{overflow:auto;width:100%}table{min-width:600px}.kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:760px){.header{padding:16px}.public-banner label{display:inline-flex;align-items:center;gap:8px;margin:8px 0}.kpi-grid,.chart-grid{grid-template-columns:minmax(0,1fr)!important}}
 +</style>
-</head>
+<link rel="stylesheet" href="i18n.css?v=20261126"><script src="i18n.js?v=20261126"></script></head>
 <body><div class="public-banner"><strong>管理者视图 · 已自动载入样板数据</strong>　<label>查看月份 <select id="demo-month"><option value="2026-01">2026 年 1 月</option><option value="2026-02">2026 年 2 月</option></select></label>　<a href="index.html#management">返回项目说明</a><p>费用金额单位均为元。回答本月费用来自哪里、哪些课题组与资源贡献较多、不同月份如何变化。源数据由同一分段计费核心生成。资源占用表示当月有计费记录的编号数量，面积使用率和月底时点占用需另行定义。</p></div>
     <div class="container">
         <!-- Header -->
@@ -733,7 +733,7 @@
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
-            const dateStr = `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
+            const dateStr = now.toLocaleDateString(document.documentElement.lang==='en'?'en-GB':'zh-CN');
             const timeStr = `${hours}:${minutes}:${seconds}`;
             document.getElementById('dynamic-time').textContent = `${dateStr} ${timeStr}`;
         }
